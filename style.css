@@ -1,168 +1,198 @@
-:root{
-    --navy:#13294B;
-    --gold:#F2A93B;
-    --light:#F8F9FA;
+:root {
+    --navy: #173A63;
+    --gold: #F2B233;
+    --cream: #FFF8EC;
+    --tosca: #8CC7C7;
+    --brown: #8B5A2B;
+    --light: #F8F9FA;
 }
 
 /* =====================
    BODY
 ===================== */
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fff;
-    color:#333;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: #333;
 }
 
 /* =====================
    NAVBAR
 ===================== */
 
-.navbar{
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+.navbar {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
 }
 
-.navbar-brand{
-    font-size:22px;
+.navbar-brand {
+    font-size: 22px;
 }
 
-.nav-link-page{
-    position:relative;
-    transition:.3s;
+.nav-link-page {
+    position: relative;
+    transition: .3s;
 }
 
-.nav-link-page::after{
-    content:"";
-    position:absolute;
-    left:8px;
-    right:8px;
-    bottom:0;
-    height:2px;
-    background:var(--gold);
-    transform:scaleX(0);
-    transform-origin:left;
-    transition:.3s;
+.nav-link-page::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .3s;
 }
 
 .nav-link-page:hover::after,
-.nav-link-page.active::after{
-    transform:scaleX(1);
+.nav-link-page.active::after {
+    transform: scaleX(1);
 }
 
 /* =====================
    HERO
 ===================== */
 
-.hero-section{
-
-    background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("img/logo.jpeg");
-
-    background-size:cover;
-    background-position:center bottom;
-    background-repeat:no-repeat;
-
-    padding:140px 0;
+.hero-section {
+    padding: 50px 0;
+    color: #333;
+    background: linear-gradient(
+        90deg,
+        #FFF8EC 60%,
+        #EAF8F8 100%
+    );
 }
 
-.hero-section h1{
-    font-weight:bold;
-    text-shadow:2px 2px 10px rgba(0,0,0,.4);
+.hero-section h1 {
+    color: var(--navy);
+    line-height: 1.2;
 }
 
-.hero-section p{
-    max-width:700px;
-    margin:auto;
+.hero-section p {
+    color: #666;
+    max-width: 500px;
 }
 
-/* =====================
-   PAGE
-===================== */
-
-.page-view{
-    display:none;
+.hero-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
 }
 
-.page-view.active{
-    display:block;
-    animation:fadeUp .4s ease;
-}
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-/* =====================
-   CARD
-===================== */
-
-.card{
-    border:none;
-    transition:.35s;
-    overflow:hidden;
-}
-
-.card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
-
-}
-
-.card img{
-
-    height:230px;
-
-    object-fit:cover;
-
-    transition:.35s;
-
-}
-
-.card:hover img{
-
-    transform:scale(1.08);
-
+.hero-text {
+    padding-top: 0px;
 }
 
 /* =====================
    BUTTON
 ===================== */
 
-.btn-warning{
-
-    background:var(--gold);
-
-    border:none;
-
-    border-radius:30px;
-
-    padding:10px 28px;
-
+.btn-warning {
+    background: var(--gold);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 28px;
 }
 
-.btn-warning:hover{
-
-    background:#e89b22;
-
+.btn-warning:hover {
+    background: #e89b22;
 }
 
-.btn-outline-light{
+/* =====================
+   PAGE
+===================== */
 
-    border-radius:30px;
+.page-view {
+    display: none;
+}
 
+.page-view.active {
+    display: block;
+    animation: fadeUp .4s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================
+   CARD
+===================== */
+
+.card {
+    border: none;
+    transition: .35s;
+    overflow: hidden;
+    background: #fffdf9;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+}
+
+.card img {
+    height: 230px;
+    object-fit: cover;
+    transition: .35s;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/* =====================
+   FIX TOMBOL SEJAJAR (SEMUA CARD)
+===================== */
+
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card .card-body p {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.card .card-body .btn {
+    margin-top: auto;
+    width: 100%;
+    border-radius: 30px;
+    padding: 12px 0;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.card .card-body .btn:hover {
+    transform: translateY(-2px);
+}
+
+.card .card-body h5 {
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.card .card-body .btn-success {
+    background: #28a745;
+    border: none;
+}
+
+.card .card-body .btn-success:hover {
+    background: #218838;
 }
 
 /* =====================
@@ -171,344 +201,193 @@ body{
 
 .fa-cookie-bite,
 .fa-cheese,
-.fa-motorcycle{
-
-    color:var(--gold);
-
+.fa-motorcycle {
+    color: var(--gold);
 }
 
 /* =====================
    CAROUSEL
 ===================== */
 
-.slide-placeholder{
-
-    height:320px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:flex-start;
-
-    padding:0 70px;
-
-    color:#fff;
-
+.slide-placeholder {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+    color: #fff;
+    background: linear-gradient(
+        135deg,
+        #7FC6C9,
+        #4F9EA8
+    );
+    border-radius: 15px;
 }
 
-.carousel-inner{
-
-    border-radius:15px;
-
-    overflow:hidden;
-
+.carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 /* =====================
    GALERI
 ===================== */
 
-#page-tentang img{
-
-    transition:.35s;
-
+.galeri-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: .35s;
+    border-radius: 10px;
 }
 
-#page-tentang img:hover{
-
-    transform:scale(1.05);
-
-}
-
-/* =====================
-   FORM
-===================== */
-
-.form-control{
-
-    border-radius:10px;
-
-}
-
-.form-control:focus{
-
-    border-color:var(--gold);
-
-    box-shadow:0 0 8px rgba(242,169,59,.4);
-
+.galeri-img:hover {
+    transform: scale(1.05);
 }
 
 /* =====================
    MODAL
 ===================== */
 
-.modal-content{
-
-    border-radius:15px;
-
+.modal-content {
+    border-radius: 15px;
 }
 
 /* =====================
    FOOTER
 ===================== */
 
-footer{
-
-    margin-top:0;
-
+footer {
+    margin-top: 0;
 }
 
-footer a{
-
-    transition:.3s;
-
-    text-decoration:none;
-
+footer a {
+    transition: .3s;
+    text-decoration: none;
 }
 
-footer a:hover{
-
-    color:white !important;
-
-}
-
-footer ul{
-
-    padding-left:0;
-
-}
-
-footer ul li{
-
-    list-style:none;
-
-    margin-bottom:8px;
-
+footer a:hover {
+    color: white !important;
 }
 
 /* =====================
    SECTION TITLE
 ===================== */
 
-section h2{
-
-    font-weight:700;
-
+section h2 {
+    font-weight: 700;
 }
 
-section p{
+section p {
+    line-height: 1.8;
+}
 
-    line-height:1.8;
+/* =====================
+   FLOATING CART
+===================== */
 
+.floating-cart {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    background: #F2A93B;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+    z-index: 9999;
+    transition: .3s;
+}
+
+.floating-cart:hover {
+    transform: scale(1.1);
+    background: #e89b22;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =====================
+   PROFIL + VISI + MISI 
+===================== */
+
+#page-tentang .row.align-items-center .col-lg-5 img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#page-tentang .row.align-items-center .card {
+    border-radius: 10px;
 }
 
 /* =====================
    RESPONSIVE
 ===================== */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 34px;
+    }
+    
+    .slide-placeholder {
+        height: 250px;
+        padding: 30px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .card img {
+        height: 200px;
+    }
 
-.hero-section{
+    .galeri-img {
+        height: 150px;
+    }
 
-padding:100px 0;
-
+    #page-tentang .row.align-items-center .col-lg-5 img {
+        max-height: 250px;
+    }
 }
 
-.hero-section h1{
-
-font-size:34px;
-
-}
-
-.slide-placeholder{
-
-height:250px;
-
-padding:30px;
-
-text-align:center;
-
-align-items:center;
-
-}
-
-.card img{
-
-height:200px;
-
-}
-
-}
-
-/* ======================
-   FLOATING CART
-====================== */
-
-.floating-cart{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:65px;
-
-height:65px;
-
-border:none;
-
-border-radius:50%;
-
-background:#F2A93B;
-
-color:white;
-
-font-size:26px;
-
-cursor:pointer;
-
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-
-z-index:9999;
-
-transition:.3s;
-
-}
-
-.floating-cart:hover{
-
-transform:scale(1.1);
-
-background:#e89b22;
-
-}
-
-.cart-badge{
-
-position:absolute;
-
-top:-6px;
-
-right:-6px;
-
-width:25px;
-
-height:25px;
-
-border-radius:50%;
-
-background:red;
-
-color:white;
-
-font-size:13px;
-
-font-weight:bold;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-}
-
-/* Tombol Produk */
-
-.card .btn{
-    width: 100%;
-    border-radius: 30px;
-    padding: 12px 0;
-    font-weight: bold;
-}
-
-.card .btn-warning{
-    margin-bottom: 10px;
-}
-
-.card .btn-success{
-    background: #28a745;
-    border: none;
-}
-
-.card .btn-success:hover{
-    background: #218838;
-}
-
-.card .btn{
-    transition: .3s;
-}
-
-.card .btn:hover{
-    transform: translateY(-2px);
-}
-
-.slide-placeholder{
-
-    height:320px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    padding:60px;
-
-    color:#fff;
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-    position:relative;
-
-}
-
-.slide-placeholder::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,.45);
-
-}
-
-.slide-placeholder *{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.slide1{
-
-    background-image:url("img/martabak 1.jpeg");
-
-}
-
-.slide2{
-
-    background-image:url("img/martabak 2.jpeg");
-
-}
-
-.slide3{
-
-    background-image:url("img/martabak 3.jpeg");
-
+@media (max-width: 576px) {
+    .card .card-body h4 {
+        font-size: 18px;
+    }
+    
+    .card .card-body p {
+        font-size: 14px;
+    }
+    
+    .card .card-body h5 {
+        font-size: 16px;
+    }
+
+    .galeri-img {
+        height: 120px;
+    }
 }
