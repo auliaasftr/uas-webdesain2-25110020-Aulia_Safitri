@@ -1,7 +1,7 @@
 :root {
     --navy: #173A63;
     --gold: #F2B233;
-    --cream: #FFF8EC;
+    --cream: #5A321C;
     --tosca: #8CC7C7;
     --brown: #8B5A2B;
     --light: #F8F9FA;
@@ -13,7 +13,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--cream);
+    background: #5A321C;
     color: #333;
 }
 
@@ -58,21 +58,17 @@ body {
 
 .hero-section {
     padding: 50px 0;
-    color: #333;
-    background: linear-gradient(
-        90deg,
-        #FFF8EC 60%,
-        #EAF8F8 100%
-    );
+    color: #5A321C;
+    background: #EFD2A0;
 }
 
 .hero-section h1 {
-    color: var(--navy);
+    color: #5A321C;
     line-height: 1.2;
 }
 
 .hero-section p {
-    color: #666;
+    color: #5A321C;
     max-width: 500px;
 }
 
@@ -134,7 +130,7 @@ body {
     border: none;
     transition: .35s;
     overflow: hidden;
-    background: #fffdf9;
+    background: #F7E6C4;
 }
 
 .card:hover {
@@ -217,18 +213,59 @@ body {
     align-items: center;
     text-align: center;
     padding: 60px;
-    color: #fff;
-    background: linear-gradient(
-        135deg,
-        #7FC6C9,
-        #4F9EA8
-    );
+    background: #F7E6C4;
     border-radius: 15px;
+}
+
+.slide-placeholder,
+.slide-placeholder h2,
+.slide-placeholder h3,
+.slide-placeholder p,
+.slide-placeholder h5 {
+    color: #3F2316;
 }
 
 .carousel-inner {
     border-radius: 15px;
     overflow: hidden;
+}
+
+/* =====================
+   CAROUSEL PANAH
+===================== */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(93, 64, 55, 0.8);
+    border-radius: 50%;
+    padding: 15px;
+    background-size: 50%;
+    transition: .3s;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(93, 64, 55, 1);
+    transform: scale(1.1);
+}
+
+/* =====================
+   CAROUSEL INDICATORS
+===================== */
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(93, 64, 55, 0.4);
+    border: none;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: #5D4037;
+    width: 14px;
+    height: 14px;
 }
 
 /* =====================
@@ -269,19 +306,20 @@ footer a {
 }
 
 footer a:hover {
-    color: white !important;
+    color: white;
 }
 
-/* =====================
-   SECTION TITLE
-===================== */
-
-section h2 {
-    font-weight: 700;
+footer h5,
+footer p,
+footer h6,
+footer .text-white-50,
+footer .text-center {
+    color: #5A321C !important;
 }
 
-section p {
-    line-height: 1.8;
+footer hr {
+    border-color: #5A321C;
+    opacity: 0.3;
 }
 
 /* =====================
@@ -339,6 +377,45 @@ section p {
 
 #page-tentang .row.align-items-center .card {
     border-radius: 10px;
+}
+
+#page-tentang .py-5 {
+    background: #EFD2A0 !important;
+}
+
+/* =====================
+   WARNA KUSTOM HOME
+===================== */
+
+#page-home .container.pt-5 h2 {
+    color: #EFD2A0;
+}
+
+#page-home .container.pt-5 p {
+    color: #FFFFFF;
+}
+
+#page-home section.py-5 h2 {
+    color: #EFD2A0;
+}
+
+#page-home section.py-5 p {
+    color: #FFFFFF;
+}
+
+#page-home.card .card-body p {
+    color: #5A321C !important;
+}
+
+/* =====================
+   PERBAIKAN CAROUSEL - WARNA TEKS
+===================== */
+
+.slide-placeholder p,
+.slide-placeholder h2,
+.slide-placeholder h3,
+.slide-placeholder h5 {
+    color: #3F2316 !important;
 }
 
 /* =====================
