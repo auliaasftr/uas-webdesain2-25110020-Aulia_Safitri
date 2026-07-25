@@ -84,21 +84,6 @@ body {
 }
 
 /* =====================
-   BUTTON
-===================== */
-
-.btn-warning {
-    background: var(--gold);
-    border: none;
-    border-radius: 30px;
-    padding: 10px 28px;
-}
-
-.btn-warning:hover {
-    background: #e89b22;
-}
-
-/* =====================
    PAGE
 ===================== */
 
@@ -180,15 +165,6 @@ body {
     color: var(--gold);
     font-weight: 700;
     margin-bottom: 12px;
-}
-
-.card .card-body .btn-success {
-    background: #28a745;
-    border: none;
-}
-
-.card .card-body .btn-success:hover {
-    background: #218838;
 }
 
 /* =====================
@@ -298,6 +274,7 @@ body {
 
 footer {
     margin-top: 0;
+    background: #F2B233 !important;
 }
 
 footer a {
@@ -323,20 +300,34 @@ footer hr {
 }
 
 /* =====================
+   FOOTER - LOGO SOSIAL MEDIA
+===================== */
+
+footer a.text-warning {
+    color: #5A321C !important;  /* Putih biar keliatan di background emas */
+    transition: .3s;
+}
+
+footer a.text-warning:hover {
+    color: #FFFFFF !important;  /* Hover jadi coklat */
+    transform: scale(1.1);
+}
+
+/* =====================
    FLOATING CART
 ===================== */
 
 .floating-cart {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 65px;
-    height: 65px;
+    right: 15px;
+    bottom: 40px;
+    width: 55px;
+    height: 55px;
     border: none;
     border-radius: 50%;
     background: #F2A93B;
     color: white;
-    font-size: 26px;
+    font-size: 22px;
     cursor: pointer;
     box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
     z-index: 9999;
@@ -352,12 +343,12 @@ footer hr {
     position: absolute;
     top: -6px;
     right: -6px;
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background: red;
     color: white;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -416,6 +407,45 @@ footer hr {
 .slide-placeholder h3,
 .slide-placeholder h5 {
     color: #3F2316 !important;
+}
+
+/* =====================
+   SEMUA BUTTON - WARNA #F2B233
+===================== */
+
+.btn-warning,
+.btn-success {
+    background: #F2B233 !important;
+    border: none !important;
+    color: #5A321C !important;
+    border-radius: 30px;
+    padding: 10px 28px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-warning:hover,
+.btn-success:hover {
+    background: #e89b22 !important;
+    color: #5A321C !important;
+    transform: translateY(-2px);
+}
+
+/* Button Kosongkan Keranjang (btn-danger) */
+.btn-danger {
+    background: #F2B233 !important;
+    border: none !important;
+    color: #5A321C !important;
+    border-radius: 30px;
+    padding: 10px 28px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-danger:hover {
+    background: #e89b22 !important;
+    color: #5A321C !important;
+    transform: translateY(-2px);
 }
 
 /* =====================
