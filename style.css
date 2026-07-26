@@ -74,7 +74,7 @@ body {
 
 .hero-img {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     border-radius: 25px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
 }
@@ -193,14 +193,6 @@ body {
     border-radius: 15px;
 }
 
-.slide-placeholder,
-.slide-placeholder h2,
-.slide-placeholder h3,
-.slide-placeholder p,
-.slide-placeholder h5 {
-    color: #3F2316;
-}
-
 .carousel-inner {
     border-radius: 15px;
     overflow: hidden;
@@ -304,12 +296,12 @@ footer hr {
 ===================== */
 
 footer a.text-warning {
-    color: #5A321C !important;  /* Putih biar keliatan di background emas */
+    color: #5A321C !important;
     transition: .3s;
 }
 
 footer a.text-warning:hover {
-    color: #FFFFFF !important;  /* Hover jadi coklat */
+    color: #FFFFFF !important;
     transform: scale(1.1);
 }
 
@@ -320,7 +312,7 @@ footer a.text-warning:hover {
 .floating-cart {
     position: fixed;
     right: 15px;
-    bottom: 40px;
+    bottom: 20px;
     width: 55px;
     height: 55px;
     border: none;
@@ -394,12 +386,12 @@ footer a.text-warning:hover {
     color: #FFFFFF;
 }
 
-#page-home.card .card-body p {
+#page-home .card .card-body p {
     color: #5A321C !important;
 }
 
 /* =====================
-   PERBAIKAN CAROUSEL - WARNA TEKS
+   PERBAIKAN CAROUSEL 
 ===================== */
 
 .slide-placeholder p,
@@ -431,7 +423,6 @@ footer a.text-warning:hover {
     transform: translateY(-2px);
 }
 
-/* Button Kosongkan Keranjang (btn-danger) */
 .btn-danger {
     background: #F2B233 !important;
     border: none !important;
