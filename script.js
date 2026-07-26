@@ -295,35 +295,3 @@ $(document).on("click", "#checkoutWA", function () {
 // Load cart saat halaman dimuat
 loadCart();
 
-// =========================
-// VALIDASI FORM KONTAK
-// =========================
-
-const form = document.getElementById("contactForm");
-
-if (form) {
-
-    form.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const nama = document.getElementById("nama").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const pesan = document.getElementById("pesan").value.trim();
-
-        if (nama === "" || email === "" || pesan === "") {
-
-            alert("Semua data harus diisi.");
-
-            return;
-
-        }
-
-        alert("Terima kasih. Pesan berhasil dikirim.");
-
-        form.reset();
-
-    });
-
-}
-
