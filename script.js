@@ -72,45 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // =========================
-    // ANIMASI CARD PRODUK
-    // =========================
-
-    document.querySelectorAll(".card").forEach(function (card) {
-
-        card.addEventListener("mouseenter", function () {
-
-            this.style.transform = "translateY(-8px)";
-            this.style.transition = ".3s";
-
-        });
-
-        card.addEventListener("mouseleave", function () {
-
-            this.style.transform = "translateY(0px)";
-
-        });
-
-    });
-
-    // =========================
-    // TOMBOL HERO
-    // =========================
-
-    document.querySelectorAll(".btn[data-page]").forEach(function (btn) {
-
-        btn.addEventListener("click", function (e) {
-
-            e.preventDefault();
-
-            pindahHalaman(
-                this.getAttribute("data-page")
-            );
-
-        });
-
-    });
-
 });
 
 // ==========================
@@ -283,7 +244,7 @@ $(document).on("click", "#checkoutWA", function () {
     pesan += "%0A";
     pesan += "Total: Rp" + total.toLocaleString();
 
-    let nomor = "628127617082";
+    const nomor = "628127617082";
 
     window.open(
         "https://wa.me/" + nomor + "?text=" + pesan,
