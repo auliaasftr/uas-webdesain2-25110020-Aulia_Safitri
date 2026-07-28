@@ -1,10 +1,5 @@
 :root {
-    --navy: #173A63;
     --gold: #F2B233;
-    --cream: #5A321C;
-    --tosca: #8CC7C7;
-    --brown: #8B5A2B;
-    --light: #F8F9FA;
 }
 
 /* =====================
@@ -291,17 +286,14 @@ footer hr {
     opacity: 0.3;
 }
 
-/* =====================
-   FOOTER - LOGO SOSIAL MEDIA
-===================== */
-
-footer a.text-warning {
-    color: #5A321C !important;
+.footer-icon {
+    color: #5A321C;
     transition: .3s;
+    text-decoration: none;
 }
 
-footer a.text-warning:hover {
-    color: #FFFFFF !important;
+.footer-icon:hover {
+    color: #FFFFFF;
     transform: scale(1.1);
 }
 
@@ -405,38 +397,18 @@ footer a.text-warning:hover {
    SEMUA BUTTON - WARNA #F2B233
 ===================== */
 
-.btn-warning,
-.btn-success {
-    background: #F2B233 !important;
-    border: none !important;
-    color: #5A321C !important;
+.btn-martabak {
+    background: #F2B233;
+    border: none;
+    color: #5A321C;
     border-radius: 30px;
-    padding: 10px 28px;
     font-weight: bold;
     transition: .3s;
 }
 
-.btn-warning:hover,
-.btn-success:hover {
-    background: #e89b22 !important;
-    color: #5A321C !important;
-    transform: translateY(-2px);
-}
-
-.btn-danger {
-    background: #F2B233 !important;
-    border: none !important;
-    color: #5A321C !important;
-    border-radius: 30px;
-    padding: 10px 28px;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.btn-danger:hover {
-    background: #e89b22 !important;
-    color: #5A321C !important;
-    transform: translateY(-2px);
+.btn-martabak:hover {
+    background: #e89b22;
+    color: #5A321C;
 }
 
 /* =====================
